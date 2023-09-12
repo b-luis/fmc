@@ -16,10 +16,18 @@ body {
   color: hsl(0, 0%, 100%);
 }
 
+h2 {
+  font-size: 1.8rem;
+}
+
+.thank-you--message {
+  font-size: 1.1rem;
+}
+
 /*
 layout
 */
-.rate {
+.container {
   display: flex;
   flex-direction: column;
   background: hsl(213, 19%, 18%);
@@ -27,8 +35,9 @@ layout
   padding: 1.5rem;
   max-width: 400px;
   margin: 0 auto;
+  margin-top: 5em;
 }
-.rate .rate-star-container {
+.container .rate-star-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,16 +47,79 @@ layout
   width: 40px; /* Adjust the width to your design */
   height: 40px;
 }
-.rate .rate-star-container .rate-star {
-  width: 20px; /* Adjust the width of the star image */
-  height: 20px; /* Adjust the height of the star image */
+.container .rate-star-container .rate-star {
+  width: 15px; /* Adjust the width of the star image */
+  height: 15px; /* Adjust the height of the star image */
 }
-.rate .rate-description {
+.container .rate-title {
+  margin-top: 0.8rem;
+}
+.container .rate-description {
   padding: 1rem 0;
+  color: hsl(217, 12%, 63%);
+}
+.container .number-container {
+  display: flex;
+  justify-content: space-between;
+}
+.container .number-container .choice {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: hsla(0, 0%, 55%, 0.118);
+  border: none;
+  color: hsl(217, 12%, 63%);
+  font-weight: 700;
+}
+.container .number-container .choice:hover {
+  background: hsl(217, 12%, 63%);
+  color: hsl(0, 0%, 100%);
+}
+.container .number-container .choice.selected {
+  background: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
 }
 
-.thank-you--hidden {
+.hidden {
   display: none;
+}
+
+.btn {
+  background: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 0;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1.2rem;
+}
+.btn:hover {
+  background: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.thank-you {
+  text-align: center;
+}
+.thank-you .selected-rating {
+  padding: 1rem;
+}
+.thank-you .selected-rating span {
+  color: hsl(25, 97%, 53%);
+  background: hsla(0, 0%, 55%, 0.118);
+  padding: 0.2rem 1rem;
+  border-radius: 20px;
+}
+.thank-you .thank-you--title {
+  margin-top: 1em;
+}
+.thank-you .thank-you--message {
+  color: hsl(217, 12%, 63%);
+  padding: 1rem 0;
 }
 
 footer {

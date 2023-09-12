@@ -11,44 +11,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-  <script src="index.js"></script>
+
 
 </head>
 
 <body>
-  <div class="container">
-    <!-- Rating state start -->
 
-    <main class="rate">
-      <div class="rate-star-container">
-        <img class="rate-star" src="./images/icon-star.svg" alt="">
-      </div>
+  <!-- Rating state start -->
 
-      <h1 class="rate-title"> How did we do?</h1>
-      <p class="rate-description"> Please let us know how we did with your support request. All feedback is appreciated
-        to help us improve our offering!</p>
+  <main class="container">
+    <div class="rate-star-container">
+      <img class="rate-star" src="./images/icon-star.svg" alt="">
+    </div>
+    <h1 class="rate-title"> How did we do?</h1>
+    <p class="rate-description"> Please let us know how we did with your support request. All feedback is appreciated
+      to help us improve our offering!</p>
+    <div class="number-container"></div>
+    <button class="btn submit">Submit</button>
+  </main>
 
-      <div class="btn number"></div>
-      <button class="btn submit">Submit</button>
-    </main>
+  <main class="container thank-you hidden">
+    <div class="thank-you--selected">
+      <img src="./images/illustration-thank-you.svg" alt="thank you">
+      <p class="selected-rating"><span>You selected out of 5</span></p>
+    </div>
 
-    <main class="thank-you thank-you--hidden">
-      <div class="selected">
-        <img src="" alt="">
-        <p> You selected out of 5</p>
-      </div>
-      <h2>Thank you!</h2>
+    <h2 class="thank-you--title">Thank you!</h2>
+    <p class="thank-you--message">We appreciate you taking the time to give a rating. If you ever need more support,
+      don’t hesitate to get in touch!</p>
+  </main>
 
-      <p>We appreciate you taking the time to give a rating. If you ever need more support,
-        don’t hesitate to get in touch!</p>
-    </main>
+  <!-- Thank you state end -->
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/" target="_blank">b-luis</a>.
+  </footer>
 
-    <!-- Thank you state end -->
-    <footer>
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="https://github.com/" target="_blank">b-luis</a>.
-    </footer>
-  </div>
+  <script src="index.js"></script>
 </body>
 
 </html>

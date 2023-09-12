@@ -39,11 +39,19 @@ body {
 
 // typography
 
+h2 {
+  font-size: 1.8rem;
+}
+
+.thank-you--message {
+  font-size: 1.1rem;
+}
+
 /*
 layout
 */
 
-.rate {
+.container {
   display: flex;
   flex-direction: column;
   background: $darkblue;
@@ -51,6 +59,7 @@ layout
   padding: 1.5rem;
   max-width: 400px;
   margin: 0 auto;
+  margin-top: 5em;
 
   .rate-star-container {
     display: flex;
@@ -63,18 +72,95 @@ layout
     height: 40px;
 
     .rate-star {
-      width: 20px; /* Adjust the width of the star image */
-      height: 20px; /* Adjust the height of the star image */
+      width: 15px; /* Adjust the width of the star image */
+      height: 15px; /* Adjust the height of the star image */
     }
+  }
+
+  .rate-title {
+    margin-top: 0.8rem;
   }
 
   .rate-description {
     padding: 1rem 0;
+    color: $lightgray;
+  }
+
+  .number-container {
+    display: flex;
+    justify-content: space-between;
+
+    .choice {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      background: hsla(0, 0%, 55%, 0.118);
+      border: none;
+      color: $lightgray;
+      font-weight: 700;
+
+      &:hover {
+        background: $lightgray;
+        color: $white;
+      }
+
+      &.selected {
+        background: $orange;
+        color: $white;
+      }
+    }
   }
 }
 
-.thank-you--hidden {
+.hidden {
   display: none;
+}
+
+.btn {
+  background: $orange;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem 0;
+  color: $white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1.2rem;
+
+  &:hover {
+    background: $white;
+    color: $orange;
+  }
+}
+
+// .thank-you * {
+//   outline: 1px solid magenta;
+// }
+
+.thank-you {
+  text-align: center;
+
+  .selected-rating {
+    padding: 1rem;
+  }
+
+  .selected-rating span {
+    color: $orange;
+    background: hsla(0, 0%, 55%, 0.118);
+    padding: 0.2rem 1rem;
+    border-radius: 20px;
+  }
+
+  .thank-you--title {
+    margin-top: 1em;
+  }
+
+  .thank-you--message {
+    color: $lightgray;
+    padding: 1rem 0;
+  }
 }
 
 // Footer

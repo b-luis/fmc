@@ -1,0 +1,211 @@
+// fonts
+$font-stack: "Red Hat Display", sans-serif;
+
+/*******
+colors
+*******/
+
+// primary
+$primary-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$white: #fff;
+
+// neutral
+$pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+/******
+general
+*******/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: $font-stack;
+}
+
+body {
+  padding: 1em;
+}
+
+// body * {
+//   outline: 1px solid magenta;
+// }
+
+/*******
+typography
+*******/
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: $dark-blue;
+}
+
+h2 {
+  font-size: 1rem;
+  color: $dark-blue;
+  text-align: left;
+}
+
+p {
+  color: $desaturated-blue;
+  text-align: left;
+}
+
+a {
+  font-size: 0.8rem;
+  color: $dark-blue;
+}
+
+.order--description {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/*******
+layout
+*******/
+
+// Main
+main {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: $white;
+  margin: 0 auto;
+
+  .order--success-image {
+    max-width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .order--section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+
+    .order--payment {
+      display: flex;
+      background: $pale-blue;
+      border-radius: 5px;
+      padding: 1rem;
+      margin: 1.2em 0;
+
+      .order--plan {
+        flex-grow: 1; // Grow to occupy remaining space
+        padding-left: 0.8rem;
+      }
+
+      .order--change {
+        align-self: center;
+      }
+    }
+  }
+}
+
+// Buttons
+.btn {
+  padding: 0.8rem 0;
+  border-radius: 10px;
+  border: none;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 1rem;
+
+  &.payment {
+    background: $bright-blue;
+    color: $white;
+    box-shadow: 2px 10px 40px -10px $bright-blue;
+
+    &:hover {
+      background: hsl(245, 64%, 57%);
+    }
+  }
+
+  &.cancel {
+    background-color: transparent;
+    color: $desaturated-blue;
+
+    &:hover {
+      border: 1px dashed $desaturated-blue;
+      color: $bright-blue;
+    }
+  }
+}
+
+// Footer
+footer {
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem 0;
+
+  color: $white;
+
+  a {
+    color: hsl(228, 100%, 80%);
+  }
+}
+
+/*******
+media queries
+*******/
+
+@media (width >= 375px) {
+  body {
+    width: 100%;
+    background: url("../images/pattern-background-mobile.svg");
+    background-color: $primary-blue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (width >= 640px) {
+  body {
+    background: url("../images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-color: $primary-blue;
+  }
+
+  .order--description {
+    font-size: 1rem;
+  }
+
+  main {
+    max-width: 400px;
+  }
+}
+
+@media (width >= 1440px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  main {
+    max-width: 450px;
+  }
+
+  .order--description {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}

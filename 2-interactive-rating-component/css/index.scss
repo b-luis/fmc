@@ -1,0 +1,96 @@
+/* 
+general
+*/
+
+// font
+
+$font-stack: "Overpass", sans-serif;
+
+// colors
+
+// primary
+$orange: hsl(25, 97%, 53%);
+
+// neutral
+$white: hsl(0, 0%, 100%);
+$lightgray: hsl(217, 12%, 63%);
+$mediumgray: hsl(216, 12%, 54%);
+$darkblue: hsl(213, 19%, 18%);
+$verydarkblue: hsl(216, 12%, 8%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 0.938rem;
+  font-family: $font-stack;
+}
+
+body {
+  background: $verydarkblue;
+  color: $white;
+}
+
+// body * {
+//   outline: 1px solid magenta;
+// }
+
+// typography
+
+/*
+layout
+*/
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  background: $darkblue;
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+
+  .rate-star-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #8d8d8d1e;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    width: 40px; /* Adjust the width to your design */
+    height: 40px;
+
+    .rate-star {
+      width: 20px; /* Adjust the width of the star image */
+      height: 20px; /* Adjust the height of the star image */
+    }
+  }
+
+  .rate-description {
+    padding: 1rem 0;
+  }
+}
+
+.thank-you--hidden {
+  display: none;
+}
+
+// Footer
+footer {
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem 0;
+
+  color: $white;
+
+  a {
+    color: hsl(228, 100%, 80%);
+  }
+}

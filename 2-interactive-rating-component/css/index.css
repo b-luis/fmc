@@ -1,0 +1,66 @@
+/* 
+general
+*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  font-size: 0.938rem;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  background: hsl(216, 12%, 8%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*
+layout
+*/
+.rate {
+  display: flex;
+  flex-direction: column;
+  background: hsl(213, 19%, 18%);
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.rate .rate-star-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(141, 141, 141, 0.1176470588);
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  width: 40px; /* Adjust the width to your design */
+  height: 40px;
+}
+.rate .rate-star-container .rate-star {
+  width: 20px; /* Adjust the width of the star image */
+  height: 20px; /* Adjust the height of the star image */
+}
+.rate .rate-description {
+  padding: 1rem 0;
+}
+
+.thank-you--hidden {
+  display: none;
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem 0;
+  color: hsl(0, 0%, 100%);
+}
+footer a {
+  color: hsl(228, 100%, 80%);
+}/*# sourceMappingURL=index.css.map */

@@ -181,6 +181,7 @@ media queries
     background: url("../images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
     background-color: $primary-blue;
+    background-size: contain;
   }
 
   .order--description {
